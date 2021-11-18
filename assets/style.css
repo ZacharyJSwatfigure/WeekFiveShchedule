@@ -28,7 +28,18 @@ textarea {
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  width: 800px;
+
+}
+
+/* added another for the li */
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin-top: 10px;
+
 }
 
 .time-block {
@@ -64,9 +75,12 @@ textarea {
 }
 
 .saveBtn {
+  justify-content: right;
+  border:none;
+  width: 80px;
+  padding: 0;
   border-left: 1px solid black;
   border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
 }
@@ -79,14 +93,27 @@ textarea {
 
 /* start my extra css here */
 
+.liBlocks {
+  list-style: none;
+}
+
 .time-blocks {
-  width: 100%;
-  height: 150px;
+  font-size: 25px;
+  height: 130px;
   display: flex;
-  justify-content: left;
+  justify-content: space-around;
   color: black;
-  padding: 25px;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 5px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+
+.infoDiv {
+  border: none;
+  border-left: 2px solid black;
+  /*border-top: 2px solid black;
+  border-bottom: 2px solid black;*/
+  font-size: 12px;
+  height: 130px;
+  width:400px;
 }
