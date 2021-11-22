@@ -1,6 +1,6 @@
 //intial global values. they arent set unless something saved in local storage
 
-const button = document.getElementByClass("saveBtn");
+const mySave = document.querySelector(".saveBtn");
 
 var time8 = "" 
 var time9 = "" 
@@ -20,28 +20,29 @@ var savedData = localStorage.getItem("isThereSavedData");
 //this function will run only when the page is loaded
 //it takes items from local storage if there is any saved items and redisplays them
 window.onload = function(){
-    if (savedData == true){
+    // if (savedData == true){
     
-        time8 = localStorage.getItem('theEight');
+    document.getElementById("hour8").value = localStorage.getItem('theEight');
+    
+    document.getElementById("hour9").value = localStorage.getItem('theNine');
+    
+    document.getElementById("hour10").value = localStorage.getItem('theTen');
+    
+    document.getElementById("hour11").value = localStorage.getItem('theEleven');
+    
+    document.getElementById("hour12").value = localStorage.getItem('theTwelve');
+    
+    document.getElementById("hour1").value = localStorage.getItem('theOne');
+    
+    document.getElementById("hour2").value = localStorage.getItem('theTwo');
 
-        time9 = localStorage.getItem("theNine"); 
-
-        time10 = localStorage.getItem("theTen");
-
-        time11 = localStorage.getItem("theEleven"); 
-
-        time12 = localStorage.getItem("theTwelve"); 
-
-        time1 = localStorage.getItem("theOne");
-
-        time2 = localStorage.getItem("theTwo"); 
-
-        time3 = localStorage.getItem("theThree"); 
-
-        time4 = localStorage.getItem("theFour"); 
-
-        time5 = localStorage.getItem("theFive"); 
-    }
+    document.getElementById("hour3").value = localStorage.getItem('theThree');
+    
+    document.getElementById("hour4").value = localStorage.getItem('theFour');
+    
+    document.getElementById("hour5").value = localStorage.getItem('theFive');
+    
+    
 };
 ///////////
 
@@ -77,8 +78,8 @@ const saveToLoc = function(){
     localStorage.setItem("theFour", time4);
     localStorage.setItem("theFive", time5);
 
-    localStorage.setItem("isThereSavedData", true)
+    // localStorage.setItem("isThereSavedData", true)
 }
 
 
-button.addEventListener("click", saveMe)
+mySave.addEventListener("click", saveMe);
